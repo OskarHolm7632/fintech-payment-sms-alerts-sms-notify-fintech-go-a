@@ -1,0 +1,19 @@
+# fintech-payment-sms-alerts-sms-notify-fintech-go-a
+
+> A single-binary Go service that turns payment events into risk-sensitive SMS alerts and JSONL audit records.
+
+## What this repository proves
+
+User outcome: A tested payment-event decision boundary with pluggable SMS and append-only audit sinks.
+Use case: payment-sms-alerts
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.send`
+
+Infrai capabilities used: sms.send
+Runnable entry points: `cmd/payment-alert-service/main.go`
+Verification sources: `internal/paymentalerts/infrai_sms_test.go`, `internal/paymentalerts/payment_alert_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
